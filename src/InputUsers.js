@@ -6,8 +6,8 @@ const InputUsers = (props) => {
     
 
     return (
-        <>
-            <h2>Add item...</h2>
+        <div className="input-users">
+            <h2>Add an item...</h2>
             <input
                 type='text'
                 placeholder='Type item here...'
@@ -15,7 +15,7 @@ const InputUsers = (props) => {
                 onChange={(e) => setValue(e.target.value)}
             />
             <button onClick={ () => props.handleAdd(value) }>add</button>
-        </>
+        </div>
     );
 }
  

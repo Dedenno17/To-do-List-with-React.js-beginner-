@@ -14,12 +14,17 @@ const TodoLists = () => {
 
         setList(newList);
         // console.log(newList);
-    } 
+    }
+    
+    const handleDelete = (id) => {
+        const deletedItem = list.filter(item => item.id !== id);
+        setList(deletedItem);
+    }
 
     return (
         <div className="todo-lists">
             <InputUsers handleAdd={ handleAdd }/>
-            <ListItem list={list}/>
+            <ListItem list={list} handleDelete={ handleDelete }/>
         </div>
     );
 }
